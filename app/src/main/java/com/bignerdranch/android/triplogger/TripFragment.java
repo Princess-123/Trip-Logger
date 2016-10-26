@@ -12,11 +12,14 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import java.io.File;
 import java.util.UUID;
@@ -24,7 +27,7 @@ import java.util.UUID;
 /**
  * Created by princess123 on 22/10/2016.
  */
-public class TripFragment extends Fragment {
+public class TripFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private static final String ARG_TRIP_ID = "trip_id";
     private static final int REQUEST_PHOTO= 2;
@@ -40,6 +43,7 @@ public class TripFragment extends Fragment {
     private EditText mCommentField;
     private Button mDeleteButton;
     private Button mSaveButton;
+    private Spinner mTripType;
 
     static TripFragment newInstance(UUID tripId){
         Bundle args = new Bundle();
@@ -187,6 +191,17 @@ public class TripFragment extends Fragment {
 
         });
 
+        Spinner spinner = (Spinner)v.findViewById(R.id.trip_triptype_spinner);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
+                R.array.triptype_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+        spinner.setSelection(mTrip.getTripType());
+
         return v;
     }
 
@@ -206,5 +221,14 @@ public class TripFragment extends Fragment {
             mPhotoView.setImageBitmap(bitmap);
         }
     }
+    public void onItemSelected(AdapterView<?> parent, View view,
+                               int pos, long id) {
+        // An item was selected. You can retrieve the selected item using
+        // parent.getItemAtPosition(pos)
+        mTrip.setTripType(pos);
+    }
 
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Another interface callback
+    }
 }

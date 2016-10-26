@@ -17,7 +17,6 @@ public class Trip {
     private String mDestination;
     private String mDuration;
     private String mComment;
-
     private int mTripType;
 
     public Trip() {

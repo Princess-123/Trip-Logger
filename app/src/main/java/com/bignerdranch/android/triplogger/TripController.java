@@ -111,6 +111,7 @@ public class TripController {
         values.put(TripTable.Cols.DESTINATION, trip.getDestination());
         values.put(TripTable.Cols.DURATION, trip.getDuration());
         values.put(TripTable.Cols.COMMENT, trip.getComment());
+        values.put(TripTable.Cols.TRIPTYPE, trip.getTripType());
 
         return values;
     }

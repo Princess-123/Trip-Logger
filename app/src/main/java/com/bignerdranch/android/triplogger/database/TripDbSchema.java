@@ -14,7 +14,9 @@ public class TripDbSchema {
             public static final String DATE = "date";
             public static final String DESTINATION = "destination";
             public static final String DURATION = "duration";
-            public static final String COMMENT = "comment"; }
+            public static final String COMMENT = "comment";
+            public static final String TRIPTYPE = "triptype";
+        }
     }
 
     public static final class SettingsTable {
@@ -28,4 +30,6 @@ public class TripDbSchema {
                     public static final String GENDER = "gender";
                     public static final String COMMENT = "comment"; }
                 }
+
+
 }

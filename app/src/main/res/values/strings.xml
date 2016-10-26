@@ -21,5 +21,10 @@
     <string name="settings_gender_hint">Enter Gender</string>
     <string name="settings_comment_label">Comment</string>
     <string name="settings_comment_hint">Enter Comment</string>
+    <string-array name="triptype_array">
+        <item>Work</item>
+        <item>Personal</item>
+        <item>Commute</item>
+    </string-array>
 
 </resources>

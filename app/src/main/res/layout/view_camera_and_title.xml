@@ -26,6 +26,10 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:hint="@string/trip_title_hint"/>
+        <Spinner
+            android:id="@+id/trip_triptype_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout

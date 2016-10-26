@@ -29,7 +29,8 @@ public  class TripBaseHelper extends SQLiteOpenHelper {
                 TripTable.Cols.DATE + ", " +
                 TripTable.Cols.DESTINATION + ", " +
                 TripTable.Cols.DURATION + ", " +
-                TripTable.Cols.COMMENT +
+                TripTable.Cols.COMMENT +", " +
+                TripTable.Cols.TRIPTYPE +
                 ")"
         );
 
