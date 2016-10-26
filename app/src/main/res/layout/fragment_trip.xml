@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="16dp"
+              android:layout_marginRight="16dp">
+
+    <include
+        layout="@layout/view_camera_and_title"
+        />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/trip_details_label"
+    style="?android:listSeparatorTextViewStyle"
+    android:id="@+id/textView"/>
+
+    <Button android:id="@+id/trip_date_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trip_destination_field"
+        android:hint="@string/trip_destination_hint"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trip_duration_field"
+            android:hint="@string/trip_duration_hint"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trip_comment_field"
+            android:hint="@string/trip_comment_hint"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trip_save_button"
+        android:id="@+id/trip_save_button"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trip_delete_button"
+        android:id="@+id/trip_delete_button"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+</LinearLayout>
