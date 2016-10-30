@@ -9,11 +9,11 @@ import java.util.UUID;
 
 public class Settings {
     private int mUUID = 0;
-    private String mName;
-    private String mId;
-    private String mEmail;
-    private String mGender;
-    private String mComment;
+    private String mName = "Pragati";
+    private String mId = "1074889";
+    private String mEmail = "something@example.com";
+    private String mGender = "female";
+    private String mComment = "comment";
 
     public int getmUUID() {
         return mUUID;
